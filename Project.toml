@@ -1,7 +1,7 @@
 name = "PlotsLH"
 uuid = "3b0e1a96-b255-4d83-a0e1-e023bc9c9868"
 authors = ["hendri54 <hendricksl@protonmail.com>"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
