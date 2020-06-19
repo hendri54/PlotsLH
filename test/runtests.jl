@@ -6,6 +6,7 @@ include("test_setup.jl")
 @testset "All" begin
     include("xy_test.jl")
     include("xyz_test.jl")
+    include("regression_test.jl")
 end
 
 # ----------------
