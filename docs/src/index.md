@@ -14,6 +14,12 @@ grouped_bar_xy
 grouped_bar_xyz
 ```
 
+## Helpers
+
+```@docs
+make_legend
+```
+
 ## General Notes
 
 The `gr` backend supports legend positions outside of the plot, such as `:outertopright` or `:outerbottom`. Outer legends stay vertical, no matter where placed. Hence, not a useful option.

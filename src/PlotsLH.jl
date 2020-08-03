@@ -4,6 +4,7 @@ using DocStringExtensions, Plots, StatsPlots
 
 export grouped_bar_xy, grouped_bar_xyz
 export plot_regressions
+export make_legend
 
 include("helpers.jl")
 include("xy.jl")
