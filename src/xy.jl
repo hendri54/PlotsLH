@@ -4,6 +4,8 @@
 Grouped bar plot of a matrix by (x,y).
 The `y` categories become groups.
 
+Bug in `Plots.jl` (v1.6.0): Some `groupLabels` such as `fill("x", n)` give size errors. 
+
 # Arguments
 - `groupLabels`: labels for each group of bars
 - `xLabels`: used for legend, unless `legendPos == :none`
@@ -31,11 +33,12 @@ function grouped_bar_xy(dataM :: AbstractMatrix{F1},
     end
 
     # markerstrokewidth for error bars
+    # linewidth does not affect error bars
     p = groupedbar(groupLabels, dataM', bar_position = :dodge,
         leg = legendPos, labels = make_legend(legendV), 
         xlabel = xLabel, ylabel = yLabel, 
         yerr = yErrM, markerstrokewidth = 2, markerstrokecolor = :black, 
-        linecolor = :black);    
+        linecolor = :black, lw = 0);    
     # end
     return p
 end

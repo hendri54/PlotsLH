@@ -17,8 +17,14 @@ function grouped_bar_xyz(xyzM :: AbstractArray{F1, 3}, xyzLabelV;
         if legendIdx > groupIdx
             dataM = dataM';
         end
+        # Legend only for first panel
+        if iSub == 1
+            subLegPos = legendPos;
+        else
+            subLegPos = :none;
+        end
         pV[iSub] = grouped_bar_xy(dataM, xyzLabelV[groupIdx];
-            legendPos = legendPos,  legendV = make_legend(xyzLabelV[legendIdx]),
+            legendPos = subLegPos,  legendV = make_legend(xyzLabelV[legendIdx]),
             xLabel = subLabelV[iSub], yLabel = yLabel)
     end
     p = plot(pV..., link = :all);

@@ -42,7 +42,8 @@ function plot_regression(xStrV, yStr, coeffV :: AbstractVector{F1},
 
     p = bar(xStrV, coeffV, yerr = seV,
         markerstrokewidth = 2, markerstrokecolor = :black, 
-        linecolor = :black,  legend = false,  ylabel = yStr);
+        linecolor = :black,  legend = false,  ylabel = yStr,
+        lw = 0);
     return p
 end
 
